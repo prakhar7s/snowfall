@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #323975;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fa-snowflake {
+  color: #fff;
+  position: absolute;
+  top: -20px;
+  animation: fall linear forwards;
+}
+
+#content {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+#content #text .fa-snowflake {
+  position: relative;
+  animation: none;
+  top: 0px;
+  margin: 10px;
+  color: rgba(216, 213, 247, 0.76);
+  transform: rotate(-10deg);
+}
+#remaining-time #types,
+#times {
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+}
+
+#remaining-time span {
+  text-align: center;
+  width: 75px;
+}
+
+#remaining-time #times span {
+  font-size: 22px;
+}
+
+#remaining-time #types span {
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(105vh);
+  }
+}
